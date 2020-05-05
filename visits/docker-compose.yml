@@ -1,0 +1,13 @@
+# docker compose version
+version: '3' 
+# what to do
+# services is like a a type of container
+services:
+    redis-server:
+        image: 'redis'
+    node-app:
+        restart: always
+        build: .
+        ports: 
+            # - are array in yaml file
+            - "4001:8081"
